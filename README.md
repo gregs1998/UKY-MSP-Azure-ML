@@ -8,6 +8,7 @@ Azure for Students gives K-12 and higher education students across the globe acc
 
 ## Step 2: Download and Import "train.csv" Dataset
 
+Follow the link: ---------- to download the "train.csv" dataset. This is the dataset which we will use to train and test the model.
+Select "New" then select Dataset and follow the on-screen instructions to upload the downloaded dataset from your computer. Then under the "Select Datasets" experiment item, drag your "train.csv" tab into the workspace.
 
-
-## Step 3: Select "Select Colums in Dataset" under Manipulation
+## Step 3: Exclude the unused Columns
