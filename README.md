@@ -5,3 +5,9 @@ This readme contains a tutorial for attendees of the University of Kentucky MSP 
 ## Step 1: Register for Azure for Students
 
 Azure for Students gives K-12 and higher education students across the globe access to hundreds of Azure resources, including those needed for Azure Machine Learning Studio. 
+
+## Step 2: Download and Import "train.csv" Dataset
+
+
+
+## Step 3: Select "Select Colums in Dataset" under Manipulation
