@@ -36,3 +36,22 @@ Select "New" then select Dataset and follow the on-screen instructions to upload
 1. Next to "Request/Response" , click "Test"
 2. Submit a random sample of data
 3. Look at the last part of the JSON that's returned: integer 0=died, 1=survived, decimal is probability
+
+
+## Steps on New Platform:
+
+1. Visit aka.ms/AzureForStudents
+2. Click *Activate Now* and sign in with your LinkBlue credentials
+3. Enter your email address and phone number when prompted - you may have to verify one of them
+4. Open the azure portal
+5. Click the menu on the left-hand side, go to resource groups
+6. Add a new resource group, we'll call it "MSPAprilML"
+7. Review+Create, then Create
+8. Now, in portal search bar, go to "Machine Learning"
+9. Give it a name, choose your resource group you just made, choose pricing "ENTERPRISE"
+*Note: You won't be billed - this draws from your Azure for Students credit*
+10. Review + Create, then Create
+
+### Let's go get the dataset
+
+1. Go to bit.ly/AzureMLWorkshopData
