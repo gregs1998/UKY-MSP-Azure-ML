@@ -86,3 +86,5 @@ On the backend, Azure is dynamically assigning a cluster of virtual machines to 
 23. Once run is finished, DEPLOY
 24. Create new Kubernetes cluster: region Central US, VM size Standard_A2_v2, Dev-test, 1 node
 25. Choose compute target, click deploy
+26. Once done, "view live endpoint" -> Test
+27. Enter some data, see results!
