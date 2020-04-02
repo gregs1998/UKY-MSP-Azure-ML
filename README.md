@@ -54,4 +54,33 @@ Select "New" then select Dataset and follow the on-screen instructions to upload
 
 ### Let's go get the dataset
 
-1. Go to bit.ly/AzureMLWorkshopData
+1. Go to https://1drv.ms/u/s!Au6UHXKoFRQhuy0aqH-LP2z9rziy?e=yie0He
+2. From Excel online, go to File -> Save As -> Download a Copy : Let's look at the CSV and see what data we have
+3. Go back to Azure portal (portal.azure.com), search for Machine Learning and open that panel
+4. Open your ML workspace resource
+5. Click "Launch Now" inside the *New Machine Learning Studio* dialog box
+6. You may have to sign back in
+7. First, we need to upload our dataset. From the left sidebar, go to "Dataset" this is a GUI that allows us to build interactive ML. Create Dataset -> From local files.
+Give it a name
+Leave tabular
+Leave datastore option default, browse to downloaded file and upload
+Column headers -> choose "use headers from first files"
+Next all the way through
+8. Back to designer, new pipeline, "easy-to-use pipeline"
+9. Drop down datasets, drag in in titanic
+10. Drag in "select column in dataset", wire titanic output to input of this module, then edit "select columns" for the following: ALL EXCEPT:
+- PassengerId, Name, Ticket, Cabin
+11. Submit, select compute target, create new, predefined (give it a name), submit
+12. Submit, create new experiment, give name, submit
+On the backend, Azure is dynamically assigning a cluster of virtual machines to run your experiment. So, this may take a LOT of time.
+13. Add "clean missing data" -> Select columns: edit columns (By Name: Add all) -> Cleaning mode: Remove entire row, submit
+14. Add "Edit metadata" -> Pclass, Sex, Survived, Embarked -> Categorical: Make categorical :: SUBMIT
+15. Add "Edit metadata" -> Survived -> Fields: label :: SUBMIT
+16. Add "split data" -> stratified split: true, on "Survived" -> 0.7 :: SUBMIT
+17. Add 2 "Train Model" blocks -> Edit label column: survived
+18. Add "2-class neural net" and "2-class SVM", wire to train model blocks 
+19. Add 2 "Score Model" blocks and wire
+20. Add an "Evaluate Model" block and wire :: SUBMIT
+21. Click on "Evaluate Model" -> Output -> We can visualize and see evaluation results
+22. Click on higher scored "train model" -> create real-time inference pipeline
+23. 
