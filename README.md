@@ -65,7 +65,7 @@ Select "New" then select Dataset and follow the on-screen instructions to upload
 9. Inference Clusters -> New -> Central US -> DevTest -> Create
 
 ### Dataset Upload
-1. Designer -> Prebuilt -> 
+1. Designer -> Prebuilt -> give it a name
 7. First, we need to upload our dataset. From the left sidebar, go to "Dataset" this is a GUI that allows us to build interactive ML. Create Dataset -> From local files.
 Give it a name
 Leave tabular
@@ -73,6 +73,7 @@ Leave datastore option default, browse to downloaded file and upload
 Column headers -> choose "use headers from first files"
 Next all the way through
 8. Back to designer, open previous pipeline
+9. Select compute target -> choose what you created earlier
 9. Drop down datasets, drag in in titanic
 10. Drag in "select column in dataset", wire titanic output to input of this module, then edit "select columns" for the following: ALL EXCEPT:
 - PassengerId, Name, Ticket, Cabin
