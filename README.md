@@ -54,14 +54,14 @@ Select "New" then select Dataset and follow the on-screen instructions to upload
 
 ### Let's go get the dataset
 
-1. Go to https://1drv.ms/u/s!Au6UHXKoFRQhuy0aqH-LP2z9rziy?e=yie0He
+1. Go to https://bit.ly/TitanicDataML
 2. From Excel online, go to File -> Save As -> Download a Copy : Let's look at the CSV and see what data we have
 3. Go back to Azure portal (portal.azure.com), search for Machine Learning and open that panel
 4. Open your ML workspace resource
 5. Click "Launch Now" inside the *New Machine Learning Studio* dialog box
 6. You may have to sign back in
 7. Manage Compute
-8. Training Clusters -> New -> VM Size: Standard_D1 -> Min number: 0 -> Max number: 1 -> CREATE
+8. Training Clusters -> New -> VM Size: STANDARD_D11_V2 -> Min number: 1 -> Max number: 2 -> CREATE
 9. Inference Clusters -> New -> Central US -> DevTest -> Create
 
 ### Dataset Upload
@@ -85,13 +85,13 @@ On the backend, Azure is dynamically assigning a cluster of virtual machines to 
 15. Add "Edit metadata" -> Survived -> Fields: label :: SUBMIT
 16. Add "split data" -> stratified split: true, on "Survived" -> 0.7 :: SUBMIT
 17. Add 2 "Train Model" blocks -> Edit label column: survived
-18. Add "2-class neural net" and "2-class SVM", wire to train model blocks 
+18. Add "two-class decision forest" and "2-class SVM", wire to train model blocks 
 19. Add 2 "Score Model" blocks and wire
 20. Add an "Evaluate Model" block and wire :: SUBMIT
 21. Click on "Evaluate Model" -> Output -> We can visualize and see evaluation results
 22. Click on higher scored "train model" -> create real-time inference pipeline
+22. Once in real-time inference pipeline, delete Evaluate Model (since we don't have two models to compare) :: SUBMIT
 23. Once run is finished, DEPLOY
-24. Create new Kubernetes cluster: region Central US, VM size Standard_A2_v2, Dev-test, 1 node
 25. Choose compute target, click deploy
 26. Once done, "view live endpoint" -> Test
 27. Enter some data, see results!
