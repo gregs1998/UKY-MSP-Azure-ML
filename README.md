@@ -83,4 +83,6 @@ On the backend, Azure is dynamically assigning a cluster of virtual machines to 
 20. Add an "Evaluate Model" block and wire :: SUBMIT
 21. Click on "Evaluate Model" -> Output -> We can visualize and see evaluation results
 22. Click on higher scored "train model" -> create real-time inference pipeline
-23. 
+23. Once run is finished, DEPLOY
+24. Create new Kubernetes cluster: region Central US, VM size Standard_A2_v2, Dev-test, 1 node
+25. Choose compute target, click deploy
