@@ -50,7 +50,7 @@ Select "New" then select Dataset and follow the on-screen instructions to upload
 8. Now, in portal search bar, go to "Machine Learning"
 9. Give it a name, choose your resource group you just made, choose pricing "ENTERPRISE"
 *Note: You won't be billed - this draws from your Azure for Students credit*
-10. Review + Create, then Create
+10. Review + Create, then Create [ ~ 3 minutes ]
 
 ### Let's go get the dataset
 
